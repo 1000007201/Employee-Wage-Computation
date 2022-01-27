@@ -2,6 +2,6 @@
 using EmployeeWageComputation;
 
 Employee employee = new Employee();
-employee.Attendence();
+employee.CalculateWage();
 
 
