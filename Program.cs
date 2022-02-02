@@ -2,6 +2,6 @@
 using EmployeeWageComputation;
 
 Employee employee = new Employee();
-employee.CalculateWage();
-
+employee.CalculateWage("Amazon",40,20,100);
+employee.CalculateWage("Apple", 40, 20, 110);
 
