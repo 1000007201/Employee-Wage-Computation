@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using EmployeeWageComputation;
 
-Employee employee = new Employee();
-employee.CalculateWage("Amazon",40,20,100);
-employee.CalculateWage("Apple", 40, 20, 110);
-
+Employee reliance = new Employee("Relience", 30, 20, 120);
+Employee facebook = new Employee("Facebook", 35, 20, 130);
+reliance.CalculateWage();
+facebook.CalculateWage();
