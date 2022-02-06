@@ -30,6 +30,10 @@ namespace EmployeeWageComputation
             }
 
         }
+        public int GetTotalWage(string company)
+        {
+            return companiesDict[company].totalEmpwage;
+        }
 
         public int CalculateWage(CompanyEmpWage companyEmpWage)
         {

@@ -6,3 +6,4 @@ employee.AddCompanyEmpWage("Reliance",30,20,100);
 employee.AddCompanyEmpWage("TCS",25,22,120);
 
 employee.CalculateWage();
+Console.WriteLine("Total wage of Reliance : " + employee.GetTotalWage("Reliance"));
