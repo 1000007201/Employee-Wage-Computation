@@ -9,27 +9,22 @@ namespace EmployeeWageComputation
     public class Employee:IEmployee
     {
         const int PRESENT = 1, ABSENT = 0, PART_TIME = 2;
-        int no_of_company;
-        int index = 0;
-        CompanyEmpWage[] companyEmpWageArray;
 
-        public Employee(int no_of_company)
-        {
-            this.no_of_company = no_of_company;
-            companyEmpWageArray = new CompanyEmpWage[no_of_company];
-        }
+        List<CompanyEmpWage> companies = new List<CompanyEmpWage>();
+
 
         public void AddCompanyEmpWage(string company_name, int wage_per_hr, int max_wrk_days, int max_wrk_hr)
         {
-            companyEmpWageArray[index] = new CompanyEmpWage(company_name, wage_per_hr, max_wrk_days, max_wrk_hr);
-            index++;
+            CompanyEmpWage company = new CompanyEmpWage(company_name, wage_per_hr, max_wrk_days, max_wrk_hr);
+            companies.Add(company);
         }
         public void CalculateWage()
         {
-            for (int i = 0; i < no_of_company; i++)
+            foreach(var data in companies)
             {
-                companyEmpWageArray[i].SetTotalEmpwage(CalculateWage(companyEmpWageArray[i]));
-                Console.WriteLine(companyEmpWageArray[i].ToString());
+                data.SetTotalEmpwage(CalculateWage(data));
+                Console.WriteLine(data.ToString());
+
             }
 
         }
