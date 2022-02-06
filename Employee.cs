@@ -10,13 +10,15 @@ namespace EmployeeWageComputation
     {
         const int PRESENT = 1, ABSENT = 0, PART_TIME = 2;
 
-        List<CompanyEmpWage> companies = new List<CompanyEmpWage>();
+        LinkedList<CompanyEmpWage> companies = new LinkedList<CompanyEmpWage>();
+        Dictionary<string,CompanyEmpWage> companiesDict = new Dictionary<string,CompanyEmpWage>();
 
 
         public void AddCompanyEmpWage(string company_name, int wage_per_hr, int max_wrk_days, int max_wrk_hr)
         {
             CompanyEmpWage company = new CompanyEmpWage(company_name, wage_per_hr, max_wrk_days, max_wrk_hr);
-            companies.Add(company);
+            companies.AddLast(company);
+            companiesDict.Add(company_name, company);
         }
         public void CalculateWage()
         {
