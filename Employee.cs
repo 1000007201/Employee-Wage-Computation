@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeWageComputation
 {
-    public class Employee
+    public class Employee:IEmployee
     {
         const int PRESENT = 1, ABSENT = 0, PART_TIME = 2;
         int no_of_company;
